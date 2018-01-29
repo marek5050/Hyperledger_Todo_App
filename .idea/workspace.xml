@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4e93f2-5088-4e5c-a2a4-96ba3504d6d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,12 +34,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+              <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="504">
+                <caret line="371" column="0" lean-forward="true" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -78,6 +91,7 @@
         <option value="$PROJECT_DIR$/todo/startFabric.sh" />
         <option value="$PROJECT_DIR$/basic-network/docker-compose.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -122,16 +136,6 @@
             <path>
               <item name="Hyperledger_Todo_App" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hyperledger_Todo_App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hyperledger_Todo_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hyperledger_Todo_App" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Hyperledger_Todo_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hyperledger_Todo_App" type="462c0819:PsiDirectoryNode" />
-              <item name="todo_cc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -254,12 +258,12 @@
       <option name="presentableId" value="Default" />
       <updated>1517260751316</updated>
       <workItem from="1517260753790" duration="92000" />
-      <workItem from="1517260854917" duration="1033000" />
+      <workItem from="1517260854917" duration="1371000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1125000" />
+    <option name="totallyTimeSpent" value="1463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="413" y="23" width="1267" height="972" extended-state="0" />
@@ -358,8 +362,19 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="504">
+            <caret line="371" column="0" lean-forward="true" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
