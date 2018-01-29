@@ -17,7 +17,7 @@ Over the last couple of years many of us witnessed the explosion in crypto-curre
 the extraordinary amount it might be at the time of this reading. While Bitcoin is a currency that can be traded all transactions
 are logged in something called a **Blockchain**. There are a few **Blockchain** technologies and one of them
 happens to be **Hyperledger**. When I first started the documentation was pretty scarce and most of it didn't work. The following
-series is meant to help developers getting started developing with Hyperledger.
+series is meant to help developers get started developing with Hyperledger.
 
 
 
@@ -27,13 +27,11 @@ A few links to get started with Hyperledger:
 * [Hyperledger Glossary](http://hyperledger-fabric.readthedocs.io/en/latest/glossary.html)
 * [Todo App](https://github.com/marek5050/Hyperledger_Todo_App)
 
+The above guides are very well put together and require little additional configuration.
 
-
-The above guides are pretty straight forward and require little additional configuration.
-
-# Building a Todo App
-The guide assumes you've followed at least the [Hyperledger: Building your first network tutorial](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html).
-The above is important because you'll need the appropriate environment to execute the code and deploy the network.
+# Building a Todo Application
+The guide assumes you've followed the [Hyperledger: Building your first network tutorial](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html).
+The above tutorial will also help configure the environment and deploying an initial network.
 
 Clone the Todo App
 ```bash
@@ -51,7 +49,7 @@ basic-network
 Hyperledger is divided into a few pieces, one will be the network architecture(./basic-network), chaincode (./todo_cc), and client code (./todo).
 The basic network architecture can remain the same for most projects and I just borrowed the above from the Hyperledge sample projects.
 
-To deploy the network we just execute
+To deploy the network we execute
 
 ```
 $ ./todo/startFabric.sh node
@@ -139,7 +137,7 @@ The 'node invoke.js' will fail until it has been updated with valid arguments
 The 'node query.js' may be run at anytime once the user has been registered
 
 ```
-**Warning: after executing this might stall for about a minute, it's not frozen.. just let it work..**
+**Warning: execution might stall for about a minute, it's not frozen.. just let it work..**
 
 
 This will download the appropriate docker containers, create the security keys, run a ordered, and whatever
@@ -165,11 +163,13 @@ $ docker logs -f 82c0b5f176b6
 
 
 ## Interacting with the Blockchain...
+
 After deploying the network we might want to interact with the blockchain. There are two components
-the **chaincode** which runs inside the network and **app** which we use to interact with the **chaincode**.
+the **chaincode** which runs inside the network and **client code** which we use to interact with the **chaincode**.
 But Hyperledger also has a security component that we need to take care of first.
 
 We'll need enroll an Admin and register a User, thank goodness these are simple scripts.
+
 ```bash
 $ node enrollAdmin.js
 Successfully enrolled admin user "admin"
@@ -196,7 +196,7 @@ Response is  [{"Key":"TASK0","Record":{"docType":"task","owner":"Marek","status"
 
 Great! I can't believe there's already so much todo!
 
-I'm getting hungry let's add something realistic into the blockchain.
+I'm hungry let's add something realistic into the blockchain.
 
 ```
 $ node invoke.js
@@ -240,6 +240,7 @@ Fabric_Client.newDefaultKeyValueStore(blah)...
     return channel.queryByChaincode(request);
 }
 ```
+
 The most important piece here is the composition of the request variable. Notice we are passing
 the name of a function `queryAllTasks` and using the queryByChaincode to execute it.
 
