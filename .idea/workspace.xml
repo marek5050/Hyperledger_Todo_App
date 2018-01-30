@@ -60,10 +60,10 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="443">
-                <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+                <caret line="263" column="95" lean-forward="true" selection-start-line="263" selection-start-column="95" selection-end-line="263" selection-end-column="95" />
                 <folding>
-                  <marker date="1517348949000" expanded="true" signature="1763:2233" ph="{...}" />
-                  <marker date="1517348949000" expanded="true" signature="1865:1951" ph="{...}" />
+                  <marker date="1517349591000" expanded="true" signature="1763:2233" ph="{...}" />
+                  <marker date="1517349591000" expanded="true" signature="1865:1951" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -335,12 +335,12 @@
       <workItem from="1517260753790" duration="92000" />
       <workItem from="1517260854917" duration="9052000" />
       <workItem from="1517342948550" duration="1827000" />
-      <workItem from="1517344837580" duration="1958000" />
+      <workItem from="1517344837580" duration="2593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12929000" />
+    <option name="totallyTimeSpent" value="13564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2138" height="972" extended-state="0" />
@@ -437,8 +437,8 @@
           <first_editor relative-caret-position="1140">
             <caret line="76" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
             <folding>
-              <marker date="1517348949000" expanded="true" signature="1763:2233" ph="{...}" />
-              <marker date="1517348949000" expanded="true" signature="1865:1951" ph="{...}" />
+              <marker date="1517349591000" expanded="true" signature="1763:2233" ph="{...}" />
+              <marker date="1517349591000" expanded="true" signature="1865:1951" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -504,8 +504,8 @@
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding>
-              <marker date="1517348949000" expanded="true" signature="1763:2233" ph="{...}" />
-              <marker date="1517348949000" expanded="true" signature="1865:1951" ph="{...}" />
+              <marker date="1517349591000" expanded="true" signature="1763:2233" ph="{...}" />
+              <marker date="1517349591000" expanded="true" signature="1865:1951" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -637,10 +637,10 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="443">
-            <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+            <caret line="263" column="95" lean-forward="true" selection-start-line="263" selection-start-column="95" selection-end-line="263" selection-end-column="95" />
             <folding>
-              <marker date="1517348949000" expanded="true" signature="1763:2233" ph="{...}" />
-              <marker date="1517348949000" expanded="true" signature="1865:1951" ph="{...}" />
+              <marker date="1517349591000" expanded="true" signature="1763:2233" ph="{...}" />
+              <marker date="1517349591000" expanded="true" signature="1865:1951" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />

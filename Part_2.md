@@ -260,6 +260,6 @@ Response is  [{"Key":"TASK0","Record":{"docType":"task","owner":"Marek","status"
 ```
 Notice "TASK3" now reflects the status **Finished**. 
 
-and off we go on the "Yellow brick road"
-![yellow brick road image](https://redtricom.files.wordpress.com/2015/07/wizard-of-oz_yellowbrickroad6x4.jpg | width=300)  
+and off we go on the "Yellow brick road"  
+![](https://redtricom.files.wordpress.com/2015/07/wizard-of-oz_yellowbrickroad6x4.jpg =300x300)  
 In part 3 we'll get dirty writing tests.
