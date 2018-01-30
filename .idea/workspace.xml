@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4e93f2-5088-4e5c-a2a4-96ba3504d6d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_2.md" afterPath="$PROJECT_DIR$/Part_2.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,11 +58,11 @@
         <entry file="file://$PROJECT_DIR$/Part_2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="204">
-                <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+              <first_editor relative-caret-position="123">
+                <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
                 <folding>
-                  <marker date="1517344604000" expanded="true" signature="1251:1721" ph="{...}" />
-                  <marker date="1517344604000" expanded="true" signature="1353:1439" ph="{...}" />
+                  <marker date="1517344720000" expanded="true" signature="1251:1721" ph="{...}" />
+                  <marker date="1517344720000" expanded="true" signature="1353:1439" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -308,12 +307,12 @@
       <updated>1517260751316</updated>
       <workItem from="1517260753790" duration="92000" />
       <workItem from="1517260854917" duration="9052000" />
-      <workItem from="1517342948550" duration="1648000" />
+      <workItem from="1517342948550" duration="1764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10792000" />
+    <option name="totallyTimeSpent" value="10908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="972" extended-state="0" />
@@ -423,8 +422,8 @@
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding>
-              <marker date="1517344604000" expanded="true" signature="1251:1721" ph="{...}" />
-              <marker date="1517344604000" expanded="true" signature="1353:1439" ph="{...}" />
+              <marker date="1517344720000" expanded="true" signature="1251:1721" ph="{...}" />
+              <marker date="1517344720000" expanded="true" signature="1353:1439" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -558,11 +557,11 @@
     <entry file="file://$PROJECT_DIR$/Part_2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="204">
-            <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <first_editor relative-caret-position="123">
+            <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
             <folding>
-              <marker date="1517344604000" expanded="true" signature="1251:1721" ph="{...}" />
-              <marker date="1517344604000" expanded="true" signature="1353:1439" ph="{...}" />
+              <marker date="1517344720000" expanded="true" signature="1251:1721" ph="{...}" />
+              <marker date="1517344720000" expanded="true" signature="1353:1439" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
