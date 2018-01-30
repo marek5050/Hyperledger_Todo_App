@@ -1,36 +1,36 @@
 ---
 layout: post
-title: "Hyperledger - Getting Started"
+title: "Hyperledger Fabric - Getting Started"
 subtitle:  "blockchain"
 date:   2018-01-29
 categories: go
 status: publish
 ---
 
-# Why Hyperledger?
+# Why Hyperledger Fabric?
 A few links for reference:
 * [Khan Academy "What is Bitcoin"](https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-what-is-it)
 * [TED Blockchain explained](https://www.youtube.com/watch?v=k53LUZxUF50)
-* [Hyperledger, Ethereum, and Corda compared](https://medium.com/@philippsandner/comparison-of-ethereum-hyperledger-fabric-and-corda-21c1bb9442f6)
+* [Hyperledger Fabric, Ethereum, and Corda compared](https://medium.com/@philippsandner/comparison-of-ethereum-hyperledger-fabric-and-corda-21c1bb9442f6)
 
 Over the last couple of years many of us witnessed the explosion in crypto-currencies from just a few pennies per Bitcoin to
 the extraordinary amount it might be at the time of this reading. While Bitcoin is a currency that can be traded all transactions
 are logged in something called a **Blockchain**. There are a few **Blockchain** technologies and one of them
-happens to be **Hyperledger**. When I first started the documentation was pretty scarce and most of it didn't work. The following
-series is meant to help developers get started developing with Hyperledger.
+happens to be **Hyperledger Fabric**. When I first started the documentation was pretty scarce and most of it didn't work. The following
+series is meant to help developers get started developing with Hyperledger Fabric.
 
 
 
-A few links to get started with Hyperledger:
-* [Hyperledger: Sample projects](http://hyperledger-fabric.readthedocs.io/en/latest/samples.html)
-* [Hyperledger: Building your first network tutorial](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html)
-* [Hyperledger Glossary](http://hyperledger-fabric.readthedocs.io/en/latest/glossary.html)
+A few links to get started with Hyperledger Fabric:
+* [Hyperledger Fabric: Sample projects](http://hyperledger-fabric.readthedocs.io/en/latest/samples.html)
+* [Hyperledger Fabric: Building your first network tutorial](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html)
+* [Hyperledger Fabric Glossary](http://hyperledger-fabric.readthedocs.io/en/latest/glossary.html)
 * [Todo App](https://github.com/marek5050/Hyperledger_Todo_App)
 
 The above guides are very well put together and require little additional configuration.
 
 # Building a Todo Application
-The guide assumes you've followed the [Hyperledger: Building your first network tutorial](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html).
+The guide assumes you've followed the [Hyperledger Fabric: Building your first network tutorial](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html).
 The above tutorial will also help configure the environment and deploying an initial network.
 
 Clone the Todo App
@@ -46,7 +46,7 @@ todo_cc
 basic-network
 ```
 
-Hyperledger is divided into a few pieces, one will be the network architecture(./basic-network), chaincode (./todo_cc), and client code (./todo).
+Hyperledger Fabric is divided into a few pieces, one will be the network architecture(./basic-network), chaincode (./todo_cc), and client code (./todo).
 The basic network architecture can remain the same for most projects and I just borrowed the above from the Hyperledge sample projects.
 
 To deploy the network we execute
@@ -166,7 +166,7 @@ $ docker logs -f 82c0b5f176b6
 
 After deploying the network we might want to interact with the blockchain. There are two components
 the **chaincode** which runs inside the network and **client code** which we use to interact with the **chaincode**.
-But Hyperledger also has a security component that we need to take care of first.
+But Hyperledger Fabric also has a security component that we need to take care of first.
 
 We'll need enroll an Admin and register a User, thank goodness these are simple scripts.
 
@@ -277,6 +277,7 @@ let Chaincode = class {
     }
 shim.start(new Chaincode());
 ```
+
 So the fabric shim initiates the Chaincode class we defined in the file. The Chaincode class has a few __mandatory__
 functions, for example **Invoke**, **Init**, **initLedger**.
 Init is called when the Chaincode is initialized on the peer and initLedger is called shortly after.

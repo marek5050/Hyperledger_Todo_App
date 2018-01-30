@@ -49,8 +49,11 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="504">
-                <caret line="372" column="0" lean-forward="true" selection-start-line="372" selection-start-column="0" selection-end-line="372" selection-end-column="0" />
-                <folding />
+                <caret line="373" column="0" lean-forward="true" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+                <folding>
+                  <marker date="1517322724000" expanded="true" signature="16241:16399" ph="{...}" />
+                  <marker date="1517322724000" expanded="true" signature="16261:16399" ph="{&quot;chaincodeId&quot;: 'todo'...}" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -71,10 +74,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>marek.bejda</find>
       <find>basic</find>
       <find>marek</find>
       <find>/chaincod</find>
+      <find>marek.bejda</find>
+      <find>ibm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -258,12 +262,12 @@
       <option name="presentableId" value="Default" />
       <updated>1517260751316</updated>
       <workItem from="1517260753790" duration="92000" />
-      <workItem from="1517260854917" duration="1984000" />
+      <workItem from="1517260854917" duration="2597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2076000" />
+    <option name="totallyTimeSpent" value="2689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="413" y="23" width="1267" height="972" extended-state="0" />
@@ -371,8 +375,11 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="504">
-            <caret line="372" column="0" lean-forward="true" selection-start-line="372" selection-start-column="0" selection-end-line="372" selection-end-column="0" />
-            <folding />
+            <caret line="373" column="0" lean-forward="true" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+            <folding>
+              <marker date="1517322724000" expanded="true" signature="16241:16399" ph="{...}" />
+              <marker date="1517322724000" expanded="true" signature="16261:16399" ph="{&quot;chaincodeId&quot;: 'todo'...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
