@@ -10,26 +10,33 @@ status: publish
 # Hyperledger Fabric: Updating the Chaincode
 
 A few links for reference:
-* [Initial Todo Network](https://github.com/marek5050/Hyperledger_Todo_App)
+* [Part 1: Building a Todo application](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/Part_1.md)
 * [Hyperledger Fabric: Sample projects](http://hyperledger-fabric.readthedocs.io/en/latest/samples.html)
 * [Hyperledger Fabric: Building your first network tutorial](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html)
 * [Hyperledger Fabric Glossary](http://hyperledger-fabric.readthedocs.io/en/latest/glossary.html)
 
 
-After successfully deploying the our network in the [Initial Todo Network](https://github.com/marek5050/Hyperledger_Todo_App)
+After successfully deploying our network in [Part 1: Building a Todo application](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/Part_1.md)
 we can Create new tasks using `node invoke.js`, and Query all tasks `node query.js`. But later on we might actually
 want to finish tasks. 
 
+In Part 1 we added **TASK3 - "Grab some lunch"**. Since it's been a few hours and our lunch break is over
+we should mark **TASK3** as finished. But we don't have the functionality to complete a task yet. In this tutorial
+we'll add the ability for our clients to **finish a task**. 
+  
 ## Adding new functionality to the chaincode
 
-Lets create a v2 of the todo app.
-```
-./todo_cc/v2
-```
-Open the Javascript Chaincode in `./todo_cc/todo.js` and add the "finishTask" function. 
-The finishTask function will simply query the Task by it's identifier and update the status field to "Finished". 
+Lets create a new version of the todo app. Duplicate the existing chaincode file and put it into a directory called v2. 
 
-```javascript
+```
+$ mkdir ./todo_cc/v2
+$ cp ./todo_cc/package.json ./todo_cc/todo.js ./todo_cc/v2
+```
+
+Open the new chaincode file `./todo_cc/v2/todo.js` and add the **finishTask** function. 
+The finishTask function will simply query the Task by it's identifier and update the status field to **Finished**. 
+
+```javascript1.6
 async finishTask(stub, args){
         console.info("============= START : Finish Task ===========");
         if (args.length != 1){
@@ -48,11 +55,10 @@ async finishTask(stub, args){
 
 ## Changing the client code
 On the client side we just want to call the remote function called **finishTask**.
-Since there's plenty of boilerplate code already in **[invoke.js](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/todo/invoke.js)** we can just copy and paste the file and let's call it **finish.js**.
-Modify the **finish.js** file by changing  the request to include the new function name **finishTask**
+Since there's plenty of boilerplate code already in **[invoke.js](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/todo/invoke.js)** we can just duplicate the file and call it **finish.js**.
+Modify the **finish.js** file by changing the **request** variable to include the new function name **finishTask**
 ```javascript 
 	var request = {
-		//targets: let default to the peer assigned to the client
         chaincodeId: 'todo',
         fcn: 'finishTask',
         args: ['TASK3'],
@@ -61,8 +67,10 @@ Modify the **finish.js** file by changing  the request to include the new functi
 	};
 ```
 
-okay! Drum roll please!!   
+Great! Drum roll please!!   
 ![drumroll](https://media.tenor.com/images/1d8dfa8bb7b30d96aea2e9edb9458c53/tenor.gif) 
+
+Let's run the code! 
 
 ``` 
 $ node ./todo/finish.js
@@ -73,7 +81,8 @@ Transaction proposal was bad
 Failed to send Proposal or receive valid response. Response null or status is not 200. exiting...
 Failed to invoke successfully :: Error: Failed to send Proposal or receive valid response. Response null or status is not 200. exiting...
 ```
-okay, that failed... why? Let's review the logs.
+
+Bummer, that failed... why? Let's review the logs.
 
 ```bash
 $ docker logs -f a22342d84768
@@ -85,12 +94,12 @@ no function if name: finishTask found
 ```
 
 
-No function found. We only updated the chaincode locally, we'll actually have the network **peer**. Each **peer** runs
-it's own version of the chaincode and just because we updated locally doesn't mean they'll be running the most up to date version.
+`no function if name: finishTask found.` We only updated the chaincode locally, we'll actually have to update the network **peer** too. 
+Each **peer** has it's own version of the chaincode and just because we updated it locally doesn't mean the *peers** will have the most recent version.
 
+## Deploy the chaincode...
+Since we have the network from part 1 running there's only 1 **peer** to update. 
 
-## Deploying the chaincode...
-Assuming we have the network from part 1 still running. 
 ```bash
 $ docker ps 
 
@@ -104,6 +113,8 @@ f2314d5a9669        hyperledger/fabric-ca                                       
 ```
 
 We would just like to "upgrade" the peer's chaincode. It's like upgrading a running application, how hard can it be...
+
+There's a couple of steps that'll need to take place. We'll need to access the peer, install the new chaincode, and finally upgrade the existing chaincode. 
 
 ### Step 0. Entering the peer 
 First we need to enter the *peer*. 
@@ -210,6 +221,7 @@ $ peer chaincode upgrade -C mychannel -l node -n todo -v 4.0 -c '{"Args":["a","1
  2018-01-30 19:06:24.051 UTC [msp/identity] Sign -> DEBU 061 Sign: plaintext: 0AA6070A6608031A0B08B084C3D30510...31300A000A04657363630A0476736363 
  2018-01-30 19:06:24.051 UTC [msp/identity] Sign -> DEBU 062 Sign: digest: BBDC02BC2D529E3CBE1A50DAD4702D655EB754F77D40478B95D67B84766BEF27
  ```
+ 
 but eventually we will see this line:
 ``` 
 2018-01-30 19:06:24.051 UTC [chaincodeCmd] upgrade -> DEBU 060 Get upgrade proposal for chaincode <name:"todo" version:"2.0" >
@@ -218,7 +230,9 @@ which signifies the upgrade was finished.
 
 
 ## Finishing the task, again
+
 The **peer** chaincode was upgraded so let's try to run the client code again.
+
 ```bash 
 $ node todo/finish.js 
 Successfully loaded user1 from persistence
@@ -233,7 +247,7 @@ Successfully committed the change to the ledger by the peer
 ```
 
 ## Verify the task was finished
-Let's query all tasks just to verify I'm finally done with lunch. 
+Let's query all tasks just to verify everyone can see that **TASK3 Grab some lunch** was **Finished**.  
 
 
 ```bash
@@ -244,7 +258,8 @@ Response is  [{"Key":"TASK0","Record":{"docType":"task","owner":"Marek","status"
 {"Key":"TASK1","Record":{"docType":"task","owner":"Marek","status":"incomplete","task":"Write a Todo app tutorial"}},
 {"Key":"TASK3","Record":{"docType":"task","owner":"Marek","status":"Finished","task":"Grab some lunch"}}]
 ```
-Notice "TASK3" now reflects the status "Finished". 
+Notice "TASK3" now reflects the status **Finished**. 
 
-
+and off we go on the "Yellow brick road"
+![yellow brick road image](https://redtricom.files.wordpress.com/2015/07/wizard-of-oz_yellowbrickroad6x4.jpg | width=300)  
 In part 3 we'll get dirty writing tests.
