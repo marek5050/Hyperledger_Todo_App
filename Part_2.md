@@ -48,8 +48,7 @@ async finishTask(stub, args){
 
 ## Changing the client code
 On the client side we just want to call the remote function called **finishTask**.
-Since there's plenty of boilerplate code already in **invoke.js** we can just copy and paste the file and let's call it **finish.js**.
-
+Since there's plenty of boilerplate code already in **[invoke.js](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/todo/invoke.js)** we can just copy and paste the file and let's call it **finish.js**.
 Modify the **finish.js** file by changing  the request to include the new function name **finishTask**
 ```javascript 
 	var request = {
