@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Fabric: Updating the Chaincode"
-subtitle:  "blockchain"
+title: "Fabric:  Adding new functionality to the chaincode"
+subtitle:  " maybe we need a version 2. of our todo app"
 date:   2018-02-01
 categories: javascript, fabric
 status: publish
 ---
 
-# Hyperledger Fabric: Updating the Chaincode
+# Fabric: Adding new functionality to the chaincode
 
 A few links for reference:
 * [Part 1: Building a Todo application](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/Part_1.md)
