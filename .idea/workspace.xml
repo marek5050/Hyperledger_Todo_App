@@ -58,12 +58,9 @@
         <entry file="file://$PROJECT_DIR$/Part_2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="236">
-                <caret line="193" column="85" lean-forward="true" selection-start-line="193" selection-start-column="85" selection-end-line="193" selection-end-column="85" />
-                <folding>
-                  <marker date="1517408006000" expanded="true" signature="1701:2171" ph="{...}" />
-                  <marker date="1517408006000" expanded="true" signature="1803:1889" ph="{...}" />
-                </folding>
+              <first_editor relative-caret-position="338">
+                <caret line="287" column="3" lean-forward="true" selection-start-line="287" selection-start-column="3" selection-end-line="287" selection-end-column="3" />
+                <folding />
               </first_editor>
               <second_editor />
             </state>
@@ -334,12 +331,12 @@
       <workItem from="1517260753790" duration="92000" />
       <workItem from="1517260854917" duration="9052000" />
       <workItem from="1517342948550" duration="1827000" />
-      <workItem from="1517344837580" duration="5062000" />
+      <workItem from="1517344837580" duration="5699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16033000" />
+    <option name="totallyTimeSpent" value="16670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2138" height="972" extended-state="0" />
@@ -435,10 +432,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="1140">
             <caret line="76" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
-            <folding>
-              <marker date="1517408006000" expanded="true" signature="1701:2171" ph="{...}" />
-              <marker date="1517408006000" expanded="true" signature="1803:1889" ph="{...}" />
-            </folding>
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -487,6 +481,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -502,10 +497,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1517408006000" expanded="true" signature="1701:2171" ph="{...}" />
-              <marker date="1517408006000" expanded="true" signature="1803:1889" ph="{...}" />
-            </folding>
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -595,6 +587,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -635,12 +628,9 @@
     <entry file="file://$PROJECT_DIR$/Part_2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="236">
-            <caret line="193" column="85" lean-forward="true" selection-start-line="193" selection-start-column="85" selection-end-line="193" selection-end-column="85" />
-            <folding>
-              <marker date="1517408006000" expanded="true" signature="1701:2171" ph="{...}" />
-              <marker date="1517408006000" expanded="true" signature="1803:1889" ph="{...}" />
-            </folding>
+          <first_editor relative-caret-position="338">
+            <caret line="287" column="3" lean-forward="true" selection-start-line="287" selection-start-column="3" selection-end-line="287" selection-end-column="3" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
