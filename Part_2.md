@@ -3,11 +3,9 @@ layout: post
 title: "Fabric:  Adding new functionality to the chaincode"
 subtitle:  " maybe we need a version 2. of our todo app"
 date:   2018-02-01
-categories: javascript, fabric
+categories: fabric
 status: publish
 ---
-
-# Fabric: Adding new functionality to the chaincode
 
 A few links for reference:
 * [Part 1: Building a Todo application](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/Part_1.md)
@@ -17,12 +15,11 @@ A few links for reference:
 
 
 After successfully deploying our network in [Part 1: Building a Todo application](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/Part_1.md)
-we can Create new tasks using `node invoke.js`, and Query all tasks `node query.js`. But later on we might actually
-want to finish tasks. 
+we can Create new tasks using `node invoke.js`, and Query all tasks `node query.js`.
 
-In Part 1 we added **TASK3 - "Grab some lunch"**. Since it's been a few hours and our lunch break is over
+Near the end of Part 1 we added **TASK3 - "Grab some lunch"**. Since it's been a few hours and our lunch break is over
 we should mark **TASK3** as finished. But we don't have the functionality to complete a task yet. In this tutorial
-we'll add the ability for our clients to **finish a task**. 
+we'll add the ability to **finish a task**. 
   
 ## Adding new functionality to the chaincode
 
@@ -54,7 +51,7 @@ async finishTask(stub, args){
 
 
 ## Changing the client code
-On the client side we just want to call the remote function called **finishTask**.
+On the client side we just want to call the remote function named **finishTask**.
 Since there's plenty of boilerplate code already in **[invoke.js](https://github.com/marek5050/Hyperledger_Todo_App/blob/master/todo/invoke.js)** we can just duplicate the file and call it **finish.js**.
 Modify the **finish.js** file by changing the **request** variable to include the new function name **finishTask**
 ```javascript 
@@ -112,12 +109,18 @@ f2314d5a9669        hyperledger/fabric-ca                                       
 4c68506a2ef4        hyperledger/fabric-orderer                                                                             "orderer"                21 hours ago        Up 21 hours         0.0.0.0:7050->7050/tcp                           orderer.example.com
 ```
 
-We would just like to "upgrade" the peer's chaincode. It's like upgrading a running application, how hard can it be...
+We would like to "upgrade" the peer's chaincode. It's like upgrading a running application, how hard can it be...
 
-There's a couple of steps that'll need to take place. We'll need to access the peer, install the new chaincode, and finally upgrade the existing chaincode. 
+There's a couple of steps that'll need to take place. 
+* Access the fabric-tools node
+* Install the new chaincode
+* Upgrade the existing chaincode 
 
-### Step 0. Entering the peer 
-First we need to enter the *peer*. 
+### Step 0. Accessing the Fabric-Tools CLI 
+First we need to access the **Fabric-Tools** container named **CLI** and find the chaincode directory. This directory
+was preconfigured to be `/root/todo_cc`. After creating the directory `./v2` above we should also see `./v2` and let's
+`cd` into it.   
+
 ```bash 
 $ docker exec -i -t cli /bin/bash  
 $ cd /root/todo_cc/
@@ -126,8 +129,36 @@ hyperledger  package.json  todo.js  v2
 $ cd v2
 ```
 
+We have a few tools available to us inside the **CLI** container. One of them being **peer**.
+**peer** for example can lis all of the installed **chaincode** versions.
+```bash
+$ peer chaincode list --installed
+2018-01-31 14:05:57.038 UTC [msp] GetLocalMSP -> DEBU 001 Returning existing local MSP
+2018-01-31 14:05:57.038 UTC [msp] GetDefaultSigningIdentity -> DEBU 002 Obtaining default signing identity
+2018-01-31 14:05:57.039 UTC [msp/identity] Sign -> DEBU 003 Sign: plaintext: 0A9B070A5B08031A0B08C59AC7D30510...74616C6C6564636861696E636F646573 
+2018-01-31 14:05:57.039 UTC [msp/identity] Sign -> DEBU 004 Sign: digest: D26300AFBC22A4D21B6F5F22CDBF348375DA2B59C4E3DA28357BEB0BE2751ADE 
+Get installed chaincodes on peer:
+name:"todo" version:"1.0" path:"/root/todo_cc" 
+2018-01-31 14:05:57.049 UTC [main] main -> INFO 005 Exiting.....
+```
+
+Here we can see the system is only aware of **version:"1.0"**. 
+We can also get a list of **instantiated** chaincodes. These are the ones currently running on the network.
+
+```bash
+$ peer chaincode list --instantiated -C mychannel
+Get instantiated chaincodes on channel mychannel:
+name:"todo" version:"1.0" path:"/root/todo_cc" escc:"escc" vscc:"vscc" 
+2018-01-31 14:08:35.239 UTC [main] main -> INFO 005 Exiting.....
+``` 
+
+Yup v1.0 everywhere! So now we know what needs to be **upgraded**.  First, we need to let the network
+know there's a new piece of chaincode available. 
+
 ### Step 1. Installing the new chaincode
-Once we are in the peer and found the location of the new chaincode we need to install it. 
+Once we are in the peer and found the location of the new chaincode we need to install it. This installs
+the new piece of chaincode on the various peers in the network.
+
 ```bash 
 $ peer chaincode install -p `pwd` -n todo  -v 2.0 -l node
 2018-01-30 19:02:52.850 UTC [msp] GetLocalMSP -> DEBU 001 Returning existing local MSP
@@ -153,13 +184,14 @@ name:"todo" version:"2.0" path:"/root/todo_cc/v2"
 2018-01-30 19:03:13.034 UTC [main] main -> INFO 005 Exiting.....
 ```
 
-Now we can see both versions of the chaincode. 
+Now we can see both versions of the chaincode. However, the old version is still running and we need to replace it 
+with the new. 
 
 ### Step 2. Upgrading the chaincode
-Once the **peer** is aware of both versions we can notify it to **upgrade** from V1.0 to V2.0.
+Once the **peers** are aware of both versions we can notify them to **upgrade** from V1.0 to V2.0.
  
 ```bash 
-$ peer chaincode upgrade -C mychannel -l node -n todo -v 4.0 -c '{"Args":["a","10"]}'
+$ peer chaincode upgrade -C mychannel -l node -n todo -v 2.0 -c '{"Args":["a","10"]}'
  ```
  There will be a lot of output and the process will take about 30 seconds. 
  
