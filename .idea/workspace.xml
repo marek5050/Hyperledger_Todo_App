@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4e93f2-5088-4e5c-a2a4-96ba3504d6d9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_2.md" afterPath="$PROJECT_DIR$/Part_2.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,9 +59,11 @@
         <entry file="file://$PROJECT_DIR$/Part_2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="338">
-                <caret line="287" column="3" lean-forward="true" selection-start-line="287" selection-start-column="3" selection-end-line="287" selection-end-column="3" />
-                <folding />
+              <first_editor relative-caret-position="222">
+                <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+                <folding>
+                  <marker date="1517414213000" expanded="true" signature="2630:2744" ph="{&quot;chaincodeId&quot;: 'todo'...}" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -109,6 +112,7 @@
       <find>log</find>
       <find>invoke.js</find>
       <find>lunch</find>
+      <find>gif</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -331,12 +335,12 @@
       <workItem from="1517260753790" duration="92000" />
       <workItem from="1517260854917" duration="9052000" />
       <workItem from="1517342948550" duration="1827000" />
-      <workItem from="1517344837580" duration="5699000" />
+      <workItem from="1517344837580" duration="6092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16670000" />
+    <option name="totallyTimeSpent" value="17063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2138" height="972" extended-state="0" />
@@ -432,7 +436,9 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="1140">
             <caret line="76" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
-            <folding />
+            <folding>
+              <marker date="1517414213000" expanded="true" signature="2630:2744" ph="{&quot;chaincodeId&quot;: 'todo'...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -497,7 +503,9 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
+            <folding>
+              <marker date="1517414213000" expanded="true" signature="2630:2744" ph="{&quot;chaincodeId&quot;: 'todo'...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -628,9 +636,11 @@
     <entry file="file://$PROJECT_DIR$/Part_2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="338">
-            <caret line="287" column="3" lean-forward="true" selection-start-line="287" selection-start-column="3" selection-end-line="287" selection-end-column="3" />
-            <folding />
+          <first_editor relative-caret-position="222">
+            <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <folding>
+              <marker date="1517414213000" expanded="true" signature="2630:2744" ph="{&quot;chaincodeId&quot;: 'todo'...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
